@@ -1,0 +1,173 @@
+<<echo=FALSE>>=
+
+# count of attributes
+attributesCount <- 5;
+
+functionalDependenciesCount = sample.int(3, 1) + 2;
+leftSideMaxAttributes = 4;
+
+
+setClass(
+  "FunctionalDependency",
+  slots = list(
+    leftSide = "vector",
+    rightSide = "vector"
+  )
+)
+
+
+functionalDependencies <- c();
+functionalDependenciesLatexCodes = c();
+
+leftSideAttributes = c();
+rightSideAttributes = c();
+
+for(k in 1:functionalDependenciesCount)
+{
+  leftSideCount = sample.int(leftSideMaxAttributes, 1);
+  rightSideCount = sample.int(3, 1);
+  leftSide = sample.int(attributesCount, leftSideCount);
+  
+  if(attributesCount-leftSideCount > 0)
+  {
+  rightSide = sample(setdiff(1:attributesCount, leftSide), min(attributesCount-leftSideCount, rightSideCount));
+  functionalDependencies <- append(functionalDependencies, new("FunctionalDependency", 
+                                     leftSide = leftSide,
+                                     rightSide = rightSide));
+  functionalDependenciesLatexCodes = append(functionalDependenciesLatexCodes, 
+      paste('\\\\tag{', intToUtf8(96 +k), "} ", intToUtf8(64 + leftSide), '\\\\rightarrow&', intToUtf8(64 + rightSide), collapse=""));
+  
+    leftSideAttributes = union(leftSideAttributes, leftSide);
+    rightSideAttributes = union(rightSideAttributes, rightSide);
+  }
+  
+}
+functionalDependenciesLatexCode = paste(functionalDependenciesLatexCodes, collapse='\\\\\\\\\n');
+
+
+getClosure <- function(functionalDependencies, derivedAttributes)
+{
+  derivedAttributesCount = length(derivedAttributes)
+  for(i in 1:length(functionalDependencies))
+  {
+    if(all(functionalDependencies[[i]]@leftSide %in% derivedAttributes))
+    {
+      derivedAttributes = union(derivedAttributes,  functionalDependencies[[i]]@rightSide)
+    }
+    
+  }
+  
+  if(length(derivedAttributes) > derivedAttributesCount)
+    getClosure(functionalDependencies, derivedAttributes)
+  else
+    derivedAttributes
+}
+
+
+N = setdiff(setdiff(1:attributesCount, leftSideAttributes), rightSideAttributes);
+L = setdiff(leftSideAttributes, rightSideAttributes);
+M = intersect(leftSideAttributes, rightSideAttributes);
+
+getKeyCandidates <- function(functionalDependencies, N, L, M)
+{
+  # initial key candidate is of form NLM
+  # try to remove attributes from M
+  keyCandidates = list();
+  
+  # check if an attribute can be removed from M:
+  reductionPossible = FALSE;
+  for(k in M)
+  {
+    newM = setdiff(M, k);
+    keyAttributes = union(N, union(L, newM));
+    closure = getClosure(functionalDependencies, keyAttributes);
+    if(setequal(closure, 1:attributesCount))
+    {
+      #print(paste("reduce",k));
+      keyCandidates = append(keyCandidates, getKeyCandidates(functionalDependencies, N, L, newM));
+      reductionPossible = TRUE;
+    }
+  }
+  if(!reductionPossible)
+  {
+    keyCandidates = list(c(union(N, union(L, M))));
+  }
+  keyCandidates
+}
+
+keyCandidates <- getKeyCandidates(functionalDependencies, N, L, M);
+answers = keyCandidates;
+answerCount = 5;
+incorrectAnswersCount = sample(1:answerCount, 1);
+
+for(keyCandidate in keyCandidates)
+{
+  unusedAttributes = setdiff(1:attributesCount, keyCandidate);
+  if(length(unusedAttributes) > 0)
+  {
+    for(unusedAttribute in unusedAttributes)
+    {
+      for(m in 1:length(keyCandidate))
+      {
+        newKeyCandidate = keyCandidate;
+        newKeyCandidate[[m]] = unusedAttribute;
+        answers = append(answers, list(newKeyCandidate));
+      }
+    }
+  }
+  else
+  {
+    for(m in keyCandidate)
+    {
+      newKeyCandidate = setdiff(keyCandidate, m);
+      answers = append(answers, list(newKeyCandidate));
+    }
+  }
+}
+
+
+selectedAnswers = sample(answers, min(5, length(answers)));
+isKeyCandidate = selectedAnswers %in% keyCandidates;
+
+selectedAnswersLatex = sapply(selectedAnswers, function(x) paste(intToUtf8(64 + x)))
+answersExplanation = sapply(selectedAnswers, function(keyCandidate){
+  closure = getClosure(functionalDependencies, keyCandidate);
+  closureLatex = paste("$\\{", paste(intToUtf8(64 + keyCandidate), collapse=""), "\\}^+ = \\{", paste(intToUtf8(64 + closure), collapse=", ") ,"\\}$", collapse="", sep="");
+  if(list(keyCandidate) %in% keyCandidates)
+  {
+    paste("True, because the closure contains all attributes and no attribute can be removed from the key: ", closureLatex, ". ", sep = "");
+  }
+  else
+  {
+    if(length(closure) < attributesCount){
+      paste("False, because the closure does not contain all attributes: ", closureLatex, ". ", sep = "");
+    }
+    else
+    {
+      paste("False, because this key candidate can be reduced.", sep = "");
+    }
+  }
+});
+@
+
+\begin{question}
+  Given the following set of functional dependencies on the attribute set $\{\Sexpr{paste(intToUtf8(64 + 1:attributesCount), collapse="")}\}$:
+  \begin{align}
+    \Sexpr{functionalDependenciesLatexCode}
+  \end{align}
+  Which of the following are key candidates?
+<<echo=FALSE, results=tex>>=
+answerlist(selectedAnswersLatex)
+@
+\end{question}
+
+\begin{solution}
+
+<<echo=FALSE, results=tex>>=
+answerlist(answersExplanation)
+@
+\end{solution}
+
+\exname{KeyCandidates}
+\extype{mchoice}
+\exsolution{\Sexpr{mchoice2string(isKeyCandidate)}}

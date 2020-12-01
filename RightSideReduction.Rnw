@@ -1,0 +1,101 @@
+<<echo=FALSE, results=hide>>=
+
+# count of attributes
+attributesCount = 5;
+
+functionalDependenciesCount = sample.int(3, 1) + 2;
+leftSideMaxAttributes = 4;
+
+
+setClass(
+  "FunctionalDependency",
+  slots = list(
+    leftSide = "vector",
+    rightSide = "vector"
+  )
+)
+
+
+functionalDependencies = c();
+functionalDependenciesLatexCodes = c();
+
+for(k in 1:functionalDependenciesCount)
+{
+  leftSideCount = sample.int(leftSideMaxAttributes, 1);
+  rightSideCount = sample.int(3, 1);
+  leftSide = sample.int(attributesCount, leftSideCount);
+  if(attributesCount-leftSideCount > 0)
+  {
+  rightSide = sample(setdiff(1:attributesCount, leftSide), min(attributesCount-leftSideCount, rightSideCount));
+  functionalDependencies = append(functionalDependencies, new("FunctionalDependency", 
+                                     leftSide = leftSide,
+                                     rightSide = rightSide));
+  functionalDependenciesLatexCodes = append(functionalDependenciesLatexCodes, 
+      paste('\\\\tag{', intToUtf8(96 +k), "} ", intToUtf8(64 + leftSide), '\\\\rightarrow&', intToUtf8(64 + rightSide), collapse=""));
+  }
+}
+functionalDependenciesLatexCode = paste(functionalDependenciesLatexCodes, collapse='\\\\\\\\\n');
+
+
+getClosure <- function(functionalDependencies, derivedAttributes)
+{
+  derivedAttributesCount = length(derivedAttributes)
+  for(i in 1:length(functionalDependencies))
+  {
+    if(all(functionalDependencies[[i]]@leftSide %in% derivedAttributes)){
+      derivedAttributes = union(derivedAttributes,  functionalDependencies[[i]]@rightSide)
+    }
+    
+  }
+  
+  if(length(derivedAttributes) > derivedAttributesCount)
+    getClosure(functionalDependencies, derivedAttributes)
+  else
+    derivedAttributes
+}
+
+
+rightReductionPossible = rep(FALSE, functionalDependenciesCount);
+
+rightReductionHint = rep("No reduction possible", functionalDependenciesCount)
+
+for(k in 1:functionalDependenciesCount)
+{
+  # check for right reduction:
+  for(l in 1:length(functionalDependencies[[k]]@rightSide))
+  {
+    attribute = functionalDependencies[[k]]@rightSide[l]
+    functionalDependenciesCopy = functionalDependencies;
+    functionalDependenciesCopy[[k]]@rightSide = setdiff(functionalDependencies[[k]]@rightSide, attribute)
+    closure = getClosure(functionalDependenciesCopy, functionalDependencies[[k]]@leftSide);
+    if(attribute %in% closure)
+    {
+      rightReductionPossible[k] = TRUE;
+      rightReductionHint[[k]] = paste("Attribute ", intToUtf8(64 + attribute), " can be removed from the right side, because $\\{", paste(intToUtf8(64 + functionalDependencies[[k]]@leftSide), collapse=""), "\\}^+ = \\{", paste(intToUtf8(64 + closure), collapse=", ") ,"\\}$", " and ", intToUtf8(64 + attribute), " $\\in \\{", paste(intToUtf8(64 + functionalDependencies[[k]]@leftSide), collapse=""), "\\}^+$ with respect to all functional dependencies, but removing ",intToUtf8(64 + attribute) ," from the right side of the $(",intToUtf8(96 + k),")$ functional dependency.", separator="", collapse="");
+      break;
+    }
+  }
+}
+
+@
+
+\begin{question}
+  Given the following set of functional dependencies on the attribute set $\{\Sexpr{paste(intToUtf8(64 + 1:attributesCount), collapse="")}\}$:
+  \begin{align}
+    \Sexpr{functionalDependenciesLatexCode}
+  \end{align}
+  For which functional dependency is a right reduction possible?
+  
+\end{question}
+
+\begin{solution}
+
+  The following right sides can be reduced:
+<<echo=FALSE, results=tex>>=
+answerlist(rightReductionHint)
+@
+\end{solution}
+
+\exname{LeftReduction}
+\extype{mchoice}
+\exsolution{\Sexpr{mchoice2string(rightReductionPossible)}}
