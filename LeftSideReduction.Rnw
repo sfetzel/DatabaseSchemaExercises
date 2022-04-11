@@ -29,9 +29,8 @@ for(k in 1:functionalDependenciesCount)
                                      leftSide = leftSide,
                                      rightSide = rightSide));
   functionalDependenciesLatexCodes = append(functionalDependenciesLatexCodes, 
-      paste('\\\\tag{', intToUtf8(96 +k), "} ", intToUtf8(64 + leftSide), '\\\\rightarrow&', intToUtf8(64 + rightSide), collapse=""));
+      paste('$',intToUtf8(64 + leftSide), '\\rightarrow', intToUtf8(64 + rightSide), '$', collapse=""));
 }
-functionalDependenciesLatexCode = paste(functionalDependenciesLatexCodes, collapse='\\\\\\\\\n');
 
 
 getClosure <- function(functionalDependencies, derivedAttributes)
@@ -78,11 +77,11 @@ for(k in 1:functionalDependenciesCount)
 
 \begin{question}
   Given the following set of functional dependencies on the attribute set $\{\Sexpr{paste(intToUtf8(64 + 1:attributesCount), collapse="")}\}$:
-  \begin{align}
-    \Sexpr{functionalDependenciesLatexCode}
-  \end{align}
-  For which functional dependency is a left reduction possible?
   
+  For which functional dependency is a left reduction possible?
+<<echo=FALSE,results=tex>>=
+answerlist(functionalDependenciesLatexCodes)
+@
 \end{question}
 
 \begin{solution}
