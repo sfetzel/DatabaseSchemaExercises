@@ -3,7 +3,7 @@
 Generates exercises for the left- and right side reduction as well for checking key candidates. Please install the package "exams" and execute "create.R" to create randomly generated exercises.
 
 You can read a short introduction to writing exercises using the exam package on:
-https://get-the-solution.net/blog/Creating%2520exercises%2520with%2520the%2520R%2520exams%2520package
+https://get-the-solution.net/blog/Creating%20exercises%20with%20the%20R%20exams%20package
 
 ## Install the package in R
 
