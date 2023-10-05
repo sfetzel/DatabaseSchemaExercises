@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/Functional dependencies exercises/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q1 : LeftSideReduction </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<p>For which functional dependency is a left reduction possible?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The following left sides can be reduced:</p>
+<ol type = "a">
+<li> No reduction possible </li>
+<li> No reduction possible </li>
+<li> No reduction possible </li>
+<li> No reduction possible </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(ADCB \rightarrow D\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(AE \rightarrow B\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(E \rightarrow D\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(CEA \rightarrow DB\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Functional dependencies exercises/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q2 : LeftSideReduction_1 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<p>For which functional dependency is a left reduction possible?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The following left sides can be reduced:</p>
+<ol type = "a">
+<li> Attribute B can be removed from the left side, because <span class="math inline">\(\{ ADC \}^+ = \{ ADCBE \}\)</span> and B <span class="math inline">\(\in \{ ADC \}^+\)</span>. </li>
+<li> No reduction possible </li>
+<li> Attribute B can be removed from the left side, because <span class="math inline">\(\{ DE \}^+ = \{ DECBA \}\)</span> and B <span class="math inline">\(\in \{ DE \}^+\)</span>. </li>
+<li> No reduction possible </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(ABDC \rightarrow E\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute B can be removed from the left side, because <span class="math inline">\(\{ ADC \}^+ = \{ ADCBE \}\)</span> and B <span class="math inline">\(\in \{ ADC \}^+\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(A \rightarrow BC\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(DBE \rightarrow C\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute B can be removed from the left side, because <span class="math inline">\(\{ DE \}^+ = \{ DECBA \}\)</span> and B <span class="math inline">\(\in \{ DE \}^+\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(DE \rightarrow CBA\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Functional dependencies exercises/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q3 : RightSideReduction </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:
+For which functional dependency is a right reduction possible?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The following right sides can be reduced:</p>
+<ol type = "a">
+<li> No reduction possible </li>
+<li> Attribute B can be removed from the right side, because <span class="math inline">\(\{ BCAE \}^+ = \{ BCAE \}\)</span> and B <span class="math inline">\(\in \{ BCAE \}^+\)</span> with respect to all functional dependencies, but removing B from the right side of the <span class="math inline">\(( b )\)</span> functional dependency. </li>
+<li> Attribute E can be removed from the right side, because <span class="math inline">\(\{ BDC \}^+ = \{ BDCEA \}\)</span> and E <span class="math inline">\(\in \{ BDC \}^+\)</span> with respect to all functional dependencies, but removing E from the right side of the <span class="math inline">\(( c )\)</span> functional dependency. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(B \rightarrow EA\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(BCAE \rightarrow B\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute B can be removed from the right side, because <span class="math inline">\(\{ BCAE \}^+ = \{ BCAE \}\)</span> and B <span class="math inline">\(\in \{ BCAE \}^+\)</span> with respect to all functional dependencies, but removing B from the right side of the <span class="math inline">\(( b )\)</span> functional dependency.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(BDC \rightarrow E\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute E can be removed from the right side, because <span class="math inline">\(\{ BDC \}^+ = \{ BDCEA \}\)</span> and E <span class="math inline">\(\in \{ BDC \}^+\)</span> with respect to all functional dependencies, but removing E from the right side of the <span class="math inline">\(( c )\)</span> functional dependency.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Functional dependencies exercises/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q4 : RightSideReduction_1 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:
+For which functional dependency is a right reduction possible?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The following right sides can be reduced:</p>
+<ol type = "a">
+<li> No reduction possible </li>
+<li> Attribute C can be removed from the right side, because <span class="math inline">\(\{ BDE \}^+ = \{ BDEAC \}\)</span> and C <span class="math inline">\(\in \{ BDE \}^+\)</span> with respect to all functional dependencies, but removing C from the right side of the <span class="math inline">\(( b )\)</span> functional dependency. </li>
+<li> Attribute E can be removed from the right side, because <span class="math inline">\(\{ D \}^+ = \{ DABEC \}\)</span> and E <span class="math inline">\(\in \{ D \}^+\)</span> with respect to all functional dependencies, but removing E from the right side of the <span class="math inline">\(( c )\)</span> functional dependency. </li>
+<li> Attribute B can be removed from the right side, because <span class="math inline">\(\{ EA \}^+ = \{ EADBC \}\)</span> and B <span class="math inline">\(\in \{ EA \}^+\)</span> with respect to all functional dependencies, but removing B from the right side of the <span class="math inline">\(( d )\)</span> functional dependency. </li>
+<li> Attribute E can be removed from the right side, because <span class="math inline">\(\{ ABD \}^+ = \{ ABDEC \}\)</span> and E <span class="math inline">\(\in \{ ABD \}^+\)</span> with respect to all functional dependencies, but removing E from the right side of the <span class="math inline">\(( e )\)</span> functional dependency. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(C \rightarrow B\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+No reduction possible
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(BDE \rightarrow CA\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute C can be removed from the right side, because <span class="math inline">\(\{ BDE \}^+ = \{ BDEAC \}\)</span> and C <span class="math inline">\(\in \{ BDE \}^+\)</span> with respect to all functional dependencies, but removing C from the right side of the <span class="math inline">\(( b )\)</span> functional dependency.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(D \rightarrow EAB\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute E can be removed from the right side, because <span class="math inline">\(\{ D \}^+ = \{ DABEC \}\)</span> and E <span class="math inline">\(\in \{ D \}^+\)</span> with respect to all functional dependencies, but removing E from the right side of the <span class="math inline">\(( c )\)</span> functional dependency.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(EA \rightarrow DB\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute B can be removed from the right side, because <span class="math inline">\(\{ EA \}^+ = \{ EADBC \}\)</span> and B <span class="math inline">\(\in \{ EA \}^+\)</span> with respect to all functional dependencies, but removing B from the right side of the <span class="math inline">\(( d )\)</span> functional dependency.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(ABD \rightarrow EC\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Attribute E can be removed from the right side, because <span class="math inline">\(\{ ABD \}^+ = \{ ABDEC \}\)</span> and E <span class="math inline">\(\in \{ ABD \}^+\)</span> with respect to all functional dependencies, but removing E from the right side of the <span class="math inline">\(( e )\)</span> functional dependency.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+</quiz>

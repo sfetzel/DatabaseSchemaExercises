@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 01</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q01 : KeyCandidates </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(ADCB \rightarrow D\)</span></p></li>
+<li><p><span class="math inline">\(AE \rightarrow B\)</span></p></li>
+<li><p><span class="math inline">\(E \rightarrow D\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{BCE\}^+ = \{BCED\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{ADE\}^+ = \{ADEB\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{ABE\}^+ = \{ABED\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{ACB\}^+ = \{ACB\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{ACD\}^+ = \{ACD\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+BCE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{BCE\}^+ = \{BCED\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+ADE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{ADE\}^+ = \{ADEB\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+ABE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{ABE\}^+ = \{ABED\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+ACB
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{ACB\}^+ = \{ACB\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+ACD
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{ACD\}^+ = \{ACD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 02</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q02 : KeyCandidates_1 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(BDE \rightarrow C\)</span></p></li>
+<li><p><span class="math inline">\(B \rightarrow D\)</span></p></li>
+<li><p><span class="math inline">\(AE \rightarrow CB\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EC\}^+ = \{EC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EB\}^+ = \{EBDC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{ED\}^+ = \{ED\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EC\}^+ = \{EC\}\)</span>. </li>
+<li> True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{EA\}^+ = \{EACBD\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EC\}^+ = \{EC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EB
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EB\}^+ = \{EBDC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+ED
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{ED\}^+ = \{ED\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EC\}^+ = \{EC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+EA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{EA\}^+ = \{EACBD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 03</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q03 : KeyCandidates_2 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(AEB \rightarrow DC\)</span></p></li>
+<li><p><span class="math inline">\(EBCD \rightarrow A\)</span></p></li>
+<li><p><span class="math inline">\(EBCD \rightarrow A\)</span></p></li>
+<li><p><span class="math inline">\(C \rightarrow B\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{BCD\}^+ = \{BCD\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EBC\}^+ = \{EBC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EBC\}^+ = \{EBC\}\)</span>. </li>
+<li> True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{EAC\}^+ = \{EACBD\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{BAC\}^+ = \{BAC\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+BCD
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{BCD\}^+ = \{BCD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EBC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EBC\}^+ = \{EBC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EBC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EBC\}^+ = \{EBC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+EAC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{EAC\}^+ = \{EACBD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+BAC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{BAC\}^+ = \{BAC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 04</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q04 : KeyCandidates_3 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(BEAC \rightarrow D\)</span></p></li>
+<li><p><span class="math inline">\(CEA \rightarrow DB\)</span></p></li>
+<li><p><span class="math inline">\(ADEB \rightarrow A\)</span></p></li>
+<li><p><span class="math inline">\(A \rightarrow ED\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EAD\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{CE\}^+ = \{CE\}\)</span>. </li>
+<li> True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{CA\}^+ = \{CAEDB\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{BA\}^+ = \{BAED\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EAD\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EAD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+CE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{CE\}^+ = \{CE\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+CA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{CA\}^+ = \{CAEDB\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+BA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{BA\}^+ = \{BAED\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EAD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 05</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q05 : KeyCandidates_4 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(DAE \rightarrow BC\)</span></p></li>
+<li><p><span class="math inline">\(ABDC \rightarrow D\)</span></p></li>
+<li><p><span class="math inline">\(AEBD \rightarrow A\)</span></p></li>
+<li><p><span class="math inline">\(BC \rightarrow AD\)</span></p></li>
+<li><p><span class="math inline">\(CAEB \rightarrow A\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{DBC\}^+ = \{DBCA\}\)</span>. </li>
+<li> True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{EDA\}^+ = \{EDABC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EDC\}^+ = \{EDC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{CDA\}^+ = \{CDA\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EBD\}^+ = \{EBD\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+DBC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{DBC\}^+ = \{DBCA\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+EDA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{EDA\}^+ = \{EDABC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EDC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EDC\}^+ = \{EDC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+CDA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{CDA\}^+ = \{CDA\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+EBD
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EBD\}^+ = \{EBD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 06</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q06 : KeyCandidates_5 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(E \rightarrow DC\)</span></p></li>
+<li><p><span class="math inline">\(EDC \rightarrow B\)</span></p></li>
+<li><p><span class="math inline">\(B \rightarrow C\)</span></p></li>
+<li><p><span class="math inline">\(ADE \rightarrow B\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{BA\}^+ = \{BAC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{ED\}^+ = \{EDCB\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{DA\}^+ = \{DA\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{CA\}^+ = \{CA\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{DA\}^+ = \{DA\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+BA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{BA\}^+ = \{BAC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+ED
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{ED\}^+ = \{EDCB\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+DA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{DA\}^+ = \{DA\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+CA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{CA\}^+ = \{CA\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+DA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{DA\}^+ = \{DA\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 07</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q07 : KeyCandidates_6 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(CAEB \rightarrow B\)</span></p></li>
+<li><p><span class="math inline">\(C \rightarrow A\)</span></p></li>
+<li><p><span class="math inline">\(E \rightarrow ACD\)</span></p></li>
+<li><p><span class="math inline">\(DECB \rightarrow A\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EACD\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EC\}^+ = \{ECAD\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{AB\}^+ = \{AB\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{AB\}^+ = \{AB\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EACD\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+EA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EACD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+EC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EC\}^+ = \{ECAD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+AB
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{AB\}^+ = \{AB\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+AB
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{AB\}^+ = \{AB\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+EA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EA\}^+ = \{EACD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 08</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q08 : KeyCandidates_7 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(DCBE \rightarrow A\)</span></p></li>
+<li><p><span class="math inline">\(BDE \rightarrow C\)</span></p></li>
+<li><p><span class="math inline">\(BDA \rightarrow EC\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{DAE\}^+ = \{DAE\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{EBA\}^+ = \{EBA\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{CBE\}^+ = \{CBE\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{DBC\}^+ = \{DBC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{DCA\}^+ = \{DCA\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+DAE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{DAE\}^+ = \{DAE\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+EBA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{EBA\}^+ = \{EBA\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+CBE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{CBE\}^+ = \{CBE\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+DBC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{DBC\}^+ = \{DBC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-20" format="html">
+<text><![CDATA[<p>
+DCA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{DCA\}^+ = \{DCA\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 09</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q09 : KeyCandidates_8 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(ADB \rightarrow CE\)</span></p></li>
+<li><p><span class="math inline">\(CA \rightarrow BD\)</span></p></li>
+<li><p><span class="math inline">\(ACE \rightarrow DB\)</span></p></li>
+<li><p><span class="math inline">\(EC \rightarrow BA\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{CE\}^+ = \{CEBAD\}\)</span>. </li>
+<li> False, because this key candidate can be reduced. </li>
+<li> False, because this key candidate can be reduced. </li>
+<li> True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{AC\}^+ = \{ACBDE\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{CDB\}^+ = \{CDB\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+CE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{CE\}^+ = \{CEBAD\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+CA
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because this key candidate can be reduced.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+EC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because this key candidate can be reduced.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+AC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{AC\}^+ = \{ACBDE\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+CDB
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{CDB\}^+ = \{CDB\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/Key Kandidates/Exercise 10</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q10 : KeyCandidates_9 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Given the following set of functional dependencies on the attribute set <span class="math inline">\(\{ABCDE\}\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(AB \rightarrow ED\)</span></p></li>
+<li><p><span class="math inline">\(BD \rightarrow ECA\)</span></p></li>
+<li><p><span class="math inline">\(EDC \rightarrow BA\)</span></p></li>
+<li><p><span class="math inline">\(E \rightarrow ADB\)</span></p></li>
+</ul>
+<p>Which of the following are key candidates?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{A\}^+ = \{A\}\)</span>. </li>
+<li> True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{E\}^+ = \{EADBC\}\)</span>. </li>
+<li> False, because this key candidate can be reduced. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{BC\}^+ = \{BC\}\)</span>. </li>
+<li> False, because the closure does not contain all attributes: <span class="math inline">\(\{A\}^+ = \{A\}\)</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{A\}^+ = \{A\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+E
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True, because the closure contains all attributes and no attribute can be removed from the key: <span class="math inline">\(\{E\}^+ = \{EADBC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+ED
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because this key candidate can be reduced.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+BC
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{BC\}^+ = \{BC\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-25" format="html">
+<text><![CDATA[<p>
+A
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False, because the closure does not contain all attributes: <span class="math inline">\(\{A\}^+ = \{A\}\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+</quiz>

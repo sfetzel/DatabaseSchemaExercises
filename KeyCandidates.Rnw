@@ -125,9 +125,14 @@ for(keyCandidate in keyCandidates)
   }
 }
 
-
+repeat  {
 selectedAnswers = sample(answers, min(5, length(answers)));
 isKeyCandidate = selectedAnswers %in% keyCandidates;
+if(TRUE %in% isKeyCandidate){
+  break
+}
+}
+
 
 selectedAnswersLatex = sapply(selectedAnswers, function(x) paste(intToUtf8(64 + x)))
 answersExplanation = sapply(selectedAnswers, function(keyCandidate){
